@@ -95,8 +95,8 @@ body {
 }
 
 header {
-  background: var(--primary-900);
-  border-bottom: 1px solid var(--primary-700);
+  background: var(--primary-500);
+  border-bottom: 1px solid var(--primary-300);
 }
 
 button {
