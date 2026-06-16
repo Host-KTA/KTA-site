@@ -73,3 +73,19 @@ text-shadow:2px 2px 8px rgba(0,0,0,0.8);
 font-size:18px;
 text-shadow:2px 2px 8px rgba(0,0,0,0.8);
 }
+:root {
+  --primary-900: #0b2a3a;
+  --primary-700: #155b7a;
+  --primary-500: #2fa7d6;
+  --primary-300: #7fd3f0;
+  --primary-100: #d9f3ff;
+
+  --bg: #0a0f14;
+  --panel: #111922;
+  --panel-soft: #162232;
+  --text: #eaf6ff;
+
+  --red: #e5484d;
+  --green: #3ccf7a;
+  --purple: #8b5cf6;
+}
