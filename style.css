@@ -59,7 +59,7 @@ url('background.png');
 
 background-size: contain;
 background-color: #111827;
-background-position:center;
+background-position:center top -80px;
 background-repeat:no-repeat;
 }
 
