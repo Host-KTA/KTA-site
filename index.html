@@ -4,9 +4,40 @@
 <header>
 <div class="logo"><h1>KTA</h1><p>KanaTales Archive</p></div>
 <nav>
-<a href="news.html">뉴스</a>
-<a href="gameinfo.html">게임정보</a>
-<a href="research.html">연구소</a>
+
+<div class="dropdown">
+<button class="dropbtn" onclick="toggleDropdown('newsMenu')">
+뉴스 ▼
+</button>
+
+<div class="dropdown-content" id="newsMenu">
+<a href="news.html">업데이트</a>
+<a href="coupon.html">쿠폰정보</a>
+</div>
+</div>
+
+
+<div class="dropdown">
+<button class="dropbtn" onclick="toggleDropdown('gameMenu')">
+게임정보 ▼
+</button>
+
+<div class="dropdown-content" id="gameMenu">
+<a href="gameinfo.html">스토리</a>
+</div>
+</div>
+
+
+<div class="dropdown">
+<button class="dropbtn" onclick="toggleDropdown('researchMenu')">
+연구소 ▼
+</button>
+
+<div class="dropdown-content" id="researchMenu">
+<a href="research.html">설정 해석</a>
+</div>
+</div>
+
 </nav>
 </header>
 <section class="hero">
