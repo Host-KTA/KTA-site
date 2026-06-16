@@ -48,3 +48,27 @@ text-decoration:none;
 .dropdown-content a:hover{
 background:#374151;
 }
+.hero{
+position: relative;
+text-align:center;
+padding:100px 20px;
+background-image:
+linear-gradient(rgba(0,0,0,0.45),
+rgba(0,0,0,0.45)),
+url('background.png');
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+}
+
+.hero h2{
+font-size:42px;
+margin-bottom:10px;
+text-shadow:2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.hero p{
+font-size:18px;
+text-shadow:2px 2px 8px rgba(0,0,0,0.8);
+}
