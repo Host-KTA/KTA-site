@@ -89,3 +89,28 @@ text-shadow:2px 2px 8px rgba(0,0,0,0.8);
   --green: #3ccf7a;
   --purple: #8b5cf6;
 }
+body {
+  background: var(--bg) !important;
+  color: var(--text) !important;
+}
+
+header {
+  background: var(--primary-900) !important;
+  border-bottom: 1px solid var(--primary-700);
+}
+
+button {
+  background: var(--primary-500) !important;
+  color: var(--text) !important;
+}
+
+button:hover {
+  background: var(--primary-300) !important;
+}
+
+.section,
+.panel,
+.box {
+  background: var(--panel) !important;
+  border: 1px solid var(--primary-900);
+}
