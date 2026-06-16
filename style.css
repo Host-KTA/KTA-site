@@ -51,7 +51,7 @@ background:#374151;
 .hero{
 position: relative;
 text-align:center;
-padding:260px 20px 80px 20px;
+padding:220px 20px 40px 20px;
 background-image:
 linear-gradient(rgba(0,0,0,0.45),
 rgba(0,0,0,0.45)),
@@ -59,7 +59,7 @@ url('background.png');
 
 background-size: contain;
 background-color: #111827;
-background-position:center top -80px;
+background-position:center;
 background-repeat:no-repeat;
 }
 
