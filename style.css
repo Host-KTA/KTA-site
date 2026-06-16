@@ -90,27 +90,39 @@ text-shadow:2px 2px 8px rgba(0,0,0,0.8);
   --purple: #8b5cf6;
 }
 body {
-  background: var(--bg) !important;
-  color: var(--text) !important;
+  background: var(--bg);
+  color: var(--text);
 }
 
 header {
-  background: var(--primary-900) !important;
+  background: var(--primary-900);
   border-bottom: 1px solid var(--primary-700);
 }
 
 button {
-  background: var(--primary-500) !important;
-  color: var(--text) !important;
+  background: var(--primary-500);
+  color: var(--text);
 }
 
 button:hover {
-  background: var(--primary-300) !important;
+  background: var(--primary-300);
 }
 
 .section,
 .panel,
 .box {
-  background: var(--panel) !important;
+  background: var(--panel);
   border: 1px solid var(--primary-900);
+}
+
+.tag-red {
+  color: var(--red);
+}
+
+.tag-green {
+  color: var(--green);
+}
+
+.tag-purple {
+  color: var(--purple);
 }
