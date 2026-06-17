@@ -178,3 +178,11 @@ header h1 + * { color: var(--primary-300) !important; }
 body {
   display: block;
 }
+body.index .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+body.detail .container {
+  display: block;
+}
