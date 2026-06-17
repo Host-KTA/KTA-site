@@ -44,7 +44,24 @@
 <h2>🧪 연구소 - 설정 해석과 떡밥 분석</h2>
 <br><a class="button" href="index.html">홈으로</a>
 </div></div>
-    <script>
+<script>
+function toggleDropdown(id){
+  const menu = document.getElementById(id);
+  const isOpen = menu.style.display === 'block';
+
+  document.querySelectorAll('.dropdown-content')
+    .forEach(el => el.style.display = 'none');
+
+  menu.style.display = isOpen ? 'none' : 'block';
+}
+
+document.addEventListener('click', function(e){
+  if(!e.target.closest('.dropdown')){
+    document.querySelectorAll('.dropdown-content')
+      .forEach(el => el.style.display = 'none');
+  }
+});
+
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.dropdown-content')
     .forEach(el => el.style.display = 'none');
