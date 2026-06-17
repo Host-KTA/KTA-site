@@ -8,8 +8,6 @@ nav a:hover{text-decoration:underline}
   max-width: 1000px;
   margin: auto;
   padding: 30px 20px;
-  display: flex;
-  flex-direction: column;
   gap: 10px;
 }
 .card,.page-card{background:#1f2937;padding:20px;border-radius:12px}
@@ -176,4 +174,7 @@ header h1 + * { color: var(--primary-300) !important; }
 
 .card {
   width: 100%;
+}
+body {
+  display: block;
 }
