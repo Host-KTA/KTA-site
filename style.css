@@ -151,6 +151,3 @@ header h1 + * { color: var(--primary-300) !important; }
 .logo a:hover {
   opacity: 0.85;
 }
-.hero{
-  background-size: cover;
-}
