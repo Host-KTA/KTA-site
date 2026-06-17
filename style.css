@@ -136,9 +136,18 @@ header h1 + * { color: var(--primary-300) !important; }
   text-decoration: none;
   color: inherit;
 }
+.logo a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
 
 .logo h1,
 .logo p {
   margin: 0;
   color: inherit;
+}
+
+.logo a:hover {
+  opacity: 0.85;
 }
