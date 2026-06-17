@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>카나테일즈 룰과 전개 방식</title>
+
+<link rel="stylesheet" href="style.css">
+
+<meta name="description" content="카나테일즈 룰과 전개 방식">
+<meta name="keywords" content="카나테일즈, KTA, 게임 정보, 에피소드">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="카나테일즈 룰과 전개 방식">
+<meta property="og:description" content="카나테일즈, KTA, 게임 정보, 에피소드">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kanatalesarchive.com">
+
+<meta name="naver-site-verification" content="5fc2a1e6d4b990cf509f9696a19940510800559c" />
+
+</head>
+
+  <body>
+<header>
+  <div class="logo">
+    <h1><a href="index.html">KTA</a></h1>
+    <p><a href="index.html">KanaTales Archive</a></p>
+  </div>
+<nav>
+<div class="dropdown">
+<button class="dropbtn" onclick="toggleDropdown('newsMenu')">
+뉴스 ▼
+</button>
+
+<div class="dropdown-content" id="newsMenu">
+<a href="news.html">변경 사항</a>
+<a href="coupon.html">쿠폰 정보</a>
+</div>
+</div>
+
+
+<div class="dropdown">
+<button class="dropbtn" onclick="toggleDropdown('gameMenu')">
+게임정보 ▼
+</button>
+
+<div class="dropdown-content" id="gameMenu">
+<a href="gameinfo.html">게임 설명</a>
+</div>
+</div>
+
+
+<div class="dropdown">
+<button class="dropbtn" onclick="toggleDropdown('researchMenu')">
+연구소 ▼
+</button>
+
+<div class="dropdown-content" id="researchMenu">
+<a href="research.html">설정 해석</a>
+</div>
+</div>
+
+</nav>
+</header>
+<main class="container">
+
+<h1>기본적인 룰</h1>
+<p>캐릭터카드 1장을 중심으로 캐릭터 카드의 수를 제외하고 추종자 카드와 스펠 카드를 이용하여 총 30장으로 덱을 구성합니다.</p>
+<p>네이버</p>
+<p>구글</p>
+<p>다음</p>
+
+</main>
+
+    <script>
+function toggleDropdown(id){
+  const menu = document.getElementById(id);
+  const isOpen = menu.style.display === 'block';
+
+  document.querySelectorAll('.dropdown-content')
+    .forEach(el => el.style.display = 'none');
+
+  menu.style.display = isOpen ? 'none' : 'block';
+}
+
+document.addEventListener('click', function(e){
+  if(!e.target.closest('.dropdown')){
+    document.querySelectorAll('.dropdown-content')
+      .forEach(el => el.style.display = 'none');
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.dropdown-content')
+    .forEach(el => el.style.display = 'none');
+});
+</script>
+  </body>
+</html>
