@@ -171,6 +171,9 @@ header h1 + * { color: var(--primary-300) !important; }
 .card a:hover {
   text-decoration: underline;
 }
+.card a {
+  color: white !important;
+}
 body {
   display: block;
 }
