@@ -4,7 +4,7 @@ header{display:flex;justify-content:space-between;align-items:center;padding:20p
 nav a{color:white;text-decoration:none;margin-left:20px;font-weight:bold}
 nav a:hover{text-decoration:underline}
 .hero{text-align:center;padding:60px 20px;background:#172554}
-container {
+.container {
   max-width: 1000px;
   margin: auto;
   padding: 30px 20px;
@@ -173,12 +173,6 @@ header h1 + * { color: var(--primary-300) !important; }
 
 .card h3 a:hover{
   text-decoration: underline;
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 
 .card {
   width: 100%;
