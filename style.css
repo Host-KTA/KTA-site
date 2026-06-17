@@ -153,5 +153,7 @@ header h1 + * { color: var(--primary-300) !important; }
 }
 .hero{
   min-height: 300px;
-  background-size: cover;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
