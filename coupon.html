@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KTA - 쿠폰 정보</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+  <h1><a href="index.html">KTA</a></h1>
+  <p><a href="index.html">KanaTales Archive</a></p>
+</div>
+
+<nav>
+
+<div class="dropdown">
+<button class="dropbtn" onclick="toggleDropdown('newsMenu')">
+뉴스 ▼
+</button>
+
+<div class="dropdown-content" id="newsMenu">
+<a href="news.html">변경 사항</a>
+<a href="coupon.html">쿠폰 정보</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn" onclick="toggleDropdown('gameMenu')">
+게임정보 ▼
+</button>
+
+<div class="dropdown-content" id="gameMenu">
+<a href="gameinfo.html">게임 설명</a>
+</div>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn" onclick="toggleDropdown('researchMenu')">
+연구소 ▼
+</button>
+
+<div class="dropdown-content" id="researchMenu">
+<a href="research.html">설정 해석</a>
+</div>
+</div>
+
+</nav>
+</header>
+
+<section class="hero">
+<h2>쿠폰 정보</h2>
+<p>사용 가능한 쿠폰과 보상을 정리하는 페이지</p>
+</section>
+
+<main class="container">
+
+<section class="card">
+<h3>🎁 쿠폰 리스트</h3>
+<ul>
+<li>쿠폰 코드: KTSORRY2606</li>
+<li>보상: 월정액 3종패키지(광거제거, 일일티켓, 일일구슬)</li>
+<li>유효기간: 2026-07-31</li>
+</ul>
+</section>
+
+</main>
+
+<script>
+function toggleDropdown(id){
+const menu = document.getElementById(id);
+
+const isOpen = menu.style.display === 'block';
+
+document.querySelectorAll('.dropdown-content')
+.forEach(el => el.style.display = 'none');
+
+menu.style.display = isOpen ? 'none' : 'block';
+}
+
+document.addEventListener('click', function(e){
+if(!e.target.matches('.dropbtn')){
+document.querySelectorAll('.dropdown-content')
+.forEach(el => el.style.display = 'none');
+}
+});
+</script>
+
+</body>
+</html>
