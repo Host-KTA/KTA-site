@@ -180,7 +180,7 @@ body {
 body.index .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 200px;
+  gap: 50px;
 }
 body.detail .container {
   display: block;
