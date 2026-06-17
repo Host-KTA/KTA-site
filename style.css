@@ -8,7 +8,6 @@ nav a:hover{text-decoration:underline}
   max-width: 1000px;
   margin: auto;
   padding: 30px 20px;
-  gap: 10px;
 }
 .card,.page-card{background:#1f2937;padding:20px;border-radius:12px}
 .page{max-width:1000px;margin:auto;padding:40px 20px}
