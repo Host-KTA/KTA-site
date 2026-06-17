@@ -167,3 +167,12 @@ header h1 + * { color: var(--primary-300) !important; }
 .card h3 a:hover{
   text-decoration: underline;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  width: 100%;
+}
