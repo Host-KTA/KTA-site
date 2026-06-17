@@ -126,3 +126,8 @@ button:hover {
 .tag-purple {
   color: var(--purple);
 }
+header .subtitle {
+  color: var(--primary-300);
+  font-weight: 500;
+  opacity: 1;
+}
