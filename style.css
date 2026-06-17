@@ -162,19 +162,7 @@ header h1 + * { color: var(--primary-300) !important; }
   background-position: center;
   background-repeat: no-repeat;
 }
-.card h3 a{
-  color: inherit;
-  text-decoration: none;
-  display: block;
-  padding: 8px 0;
-}
 
-.card h3 a:hover{
-  text-decoration: underline;
-}
-.card {
-  width: 20px;
-}
 .card a {
   color: white;
   text-decoration: none;
