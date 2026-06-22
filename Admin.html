@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>KTA 관리자</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+<body>
+
+
+
+<h1>KTA 관리자</h1>
+
+
+
+제목
+
+<br>
+
+<input id="title">
+
+
+<br><br>
+
+
+
+카테고리
+
+
+<br>
+
+<select id="category">
+
+<option>변경 사항</option>
+
+<option>쿠폰 정보</option>
+
+<option>게임 설명</option>
+
+<option>에피소드</option>
+
+<option>설정 해석</option>
+
+</select>
+
+
+
+<br><br>
+
+
+
+내용
+
+
+<br>
+
+<textarea id="content"
+rows="10"
+cols="60"></textarea>
+
+
+
+<br><br>
+
+
+
+<button onclick="generate()">
+
+HTML 생성
+
+</button>
+
+
+
+
+<br><br>
+
+
+
+<textarea
+id="result"
+
+rows="20"
+
+cols="80">
+
+</textarea>
+
+
+
+
+
+<script>
+
+
+function generate(){
+
+
+let title=
+
+document.getElementById("title").value;
+
+
+
+let category=
+
+document.getElementById("category").value;
+
+
+
+let content=
+
+document.getElementById("content").value;
+
+
+
+
+let html=`
+
+<section class="card">
+
+
+<h3>
+
+${title}
+
+</h3>
+
+
+
+<p>
+
+${content}
+
+</p>
+
+
+
+</section>
+
+`;
+
+
+
+
+document.getElementById("result").value
+
+=html;
+
+
+
+}
+
+
+
+
+</script>
+
+
+
+
+</body>
+
+
+
+</html>
