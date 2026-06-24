@@ -4,6 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>KTA CMS 2.0</title>
 
@@ -16,82 +17,45 @@
 
 <h1>KTA CMS 2.0</h1>
 
-파일명
 
-<br>
-
-<input id="filename">
-
-<br><br>
-
-
-페이지 제목
-
-<br>
-
+<p>제목</p>
 <input id="title">
 
-<br><br>
 
-
-설명
-
-<br>
-
-<input id="description">
-
-<br><br>
-
-
-Hero 제목
-
-<br>
-
+<p>Hero 제목</p>
 <input id="heroTitle">
 
-<br><br>
 
-
-Hero 설명
-
-<br>
-
+<p>Hero 설명</p>
 <input id="heroDesc">
 
+
+<p>본문</p>
+
+<textarea
+id="content"
+rows="10"
+cols="80">
+</textarea>
+
+
 <br><br>
 
 
-본문
-
-<br>
-
-<textarea id="content"
-rows="15"
-cols="80"></textarea>
-
-
-<br><br>
-
-
-<button onclick="generate()">
+<button id="generateBtn">
 
 HTML 생성
 
 </button>
 
 
-
 <br><br>
-
 
 
 <textarea
 id="result"
-
-rows="30"
-
+rows="20"
 cols="100">
-
 </textarea>
 
 
@@ -100,66 +64,45 @@ cols="100">
 <script>
 
 
-function generate(){
+const button =
+document.getElementById("generateBtn");
 
 
+button.addEventListener(
+"click",
 
-let title =
+function(){
+
+
+const title =
 document.getElementById("title").value;
 
 
-let description =
-document.getElementById("description").value;
-
-
-let heroTitle =
+const heroTitle =
 document.getElementById("heroTitle").value;
 
 
-let heroDesc =
+const heroDesc =
 document.getElementById("heroDesc").value;
 
 
-let content =
+const content =
 document.getElementById("content").value;
 
 
 
-let html = `
 
+const html = `
 
-<title>
-
-${title}
-
-</title>
-
-
-
-<meta name="description"
-
-content="${description}">
-
-
+<title>${title}</title>
 
 <section class="hero">
 
-<h2>
+<h2>${heroTitle}</h2>
 
-${heroTitle}
-
-</h2>
-
-
-<p>
-
-${heroDesc}
-
-</p>
-
+<p>${heroDesc}</p>
 
 </section>
-
 
 
 <main class="container">
@@ -168,13 +111,10 @@ ${content}
 
 </main>
 
-
-
-<script src="script.js"></script>
-
-
+<script src="script.js"><\/script>
 
 `;
+
 
 
 
@@ -186,10 +126,10 @@ html;
 
 }
 
+);
 
 
 </script>
-
 
 
 
