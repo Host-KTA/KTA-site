@@ -1,75 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
 
 <head>
 
 <meta charset="UTF-8">
 
-<title>KTA 관리자</title>
+<title>KTA CMS 2.0</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 
-
 <body>
 
+<h1>KTA CMS 2.0</h1>
+
+파일명
+
+<br>
+
+<input id="filename">
+
+<br><br>
 
 
-<h1>KTA 관리자</h1>
-
-
-
-제목
+페이지 제목
 
 <br>
 
 <input id="title">
 
-
 <br><br>
 
 
-
-카테고리
-
+설명
 
 <br>
 
-<select id="category">
-
-<option>변경 사항</option>
-
-<option>쿠폰 정보</option>
-
-<option>게임 설명</option>
-
-<option>에피소드</option>
-
-<option>설정 해석</option>
-
-</select>
-
-
+<input id="description">
 
 <br><br>
 
 
+Hero 제목
 
-내용
+<br>
 
+<input id="heroTitle">
+
+<br><br>
+
+
+Hero 설명
+
+<br>
+
+<input id="heroDesc">
+
+<br><br>
+
+
+본문
 
 <br>
 
 <textarea id="content"
-rows="10"
-cols="60"></textarea>
-
+rows="15"
+cols="80"></textarea>
 
 
 <br><br>
-
 
 
 <button onclick="generate()">
@@ -80,7 +81,6 @@ HTML 생성
 
 
 
-
 <br><br>
 
 
@@ -88,12 +88,11 @@ HTML 생성
 <textarea
 id="result"
 
-rows="20"
+rows="30"
 
-cols="80">
+cols="100">
 
 </textarea>
-
 
 
 
@@ -104,61 +103,88 @@ cols="80">
 function generate(){
 
 
-let title=
 
+let title =
 document.getElementById("title").value;
 
 
-
-let category=
-
-document.getElementById("category").value;
+let description =
+document.getElementById("description").value;
 
 
+let heroTitle =
+document.getElementById("heroTitle").value;
 
-let content=
 
+let heroDesc =
+document.getElementById("heroDesc").value;
+
+
+let content =
 document.getElementById("content").value;
 
 
 
-
-let html=`
-
-<section class="card">
+let html = `
 
 
-<h3>
+<title>
 
 ${title}
 
-</h3>
+</title>
 
+
+
+<meta name="description"
+
+content="${description}">
+
+
+
+<section class="hero">
+
+<h2>
+
+${heroTitle}
+
+</h2>
 
 
 <p>
 
-${content}
+${heroDesc}
 
 </p>
 
 
-
 </section>
+
+
+
+<main class="container">
+
+${content}
+
+</main>
+
+
+
+<script src="script.js"></script>
+
+
 
 `;
 
 
 
-
 document.getElementById("result").value
-
-=html;
+=
+html;
 
 
 
 }
-
 
 
 
@@ -168,7 +194,5 @@ document.getElementById("result").value
 
 
 </body>
-
-
 
 </html>
