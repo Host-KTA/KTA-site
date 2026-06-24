@@ -112,25 +112,6 @@
 
 </main>
 
-<script>
-function toggleDropdown(id){
-const menu = document.getElementById(id);
-
-const isOpen = menu.style.display === 'block';
-
-document.querySelectorAll('.dropdown-content')
-.forEach(el => el.style.display = 'none');
-
-menu.style.display = isOpen ? 'none' : 'block';
-}
-
-document.addEventListener('click', function(e){
-if(!e.target.matches('.dropbtn')){
-document.querySelectorAll('.dropdown-content')
-.forEach(el => el.style.display = 'none');
-}
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
