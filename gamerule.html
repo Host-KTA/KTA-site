@@ -114,28 +114,6 @@
   <p>본인의 캐릭터 또는 상대방의 캐릭터의 체력이 0이하가 되면 승패가 결정된다.</p>
 </main>
 
-    <script>
-function toggleDropdown(id){
-  const menu = document.getElementById(id);
-  const isOpen = menu.style.display === 'block';
-
-  document.querySelectorAll('.dropdown-content')
-    .forEach(el => el.style.display = 'none');
-
-  menu.style.display = isOpen ? 'none' : 'block';
-}
-
-document.addEventListener('click', function(e){
-  if(!e.target.closest('.dropdown')){
-    document.querySelectorAll('.dropdown-content')
-      .forEach(el => el.style.display = 'none');
-  }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.dropdown-content')
-    .forEach(el => el.style.display = 'none');
-});
-</script>
+<script src="script.js"></script>
   </body>
 </html>
