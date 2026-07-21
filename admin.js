@@ -16,8 +16,10 @@ async function generateHtml() {
     const content = document.getElementById("content").value;
     const filename = document.getElementById("filename").value.trim();
 
+const finalFilename = filename || title.replace(/\s+/g, "_");
+
 const listCode =
-`<h3><a href="${filename}.html">${title}</a></h3>`;
+`<h3><a href="${finalFilename}.html">${title}</a></h3>`;
 
     // description은 비워두면 Hero 설명을 사용
 const description = document.getElementById("description").value;
@@ -44,7 +46,7 @@ const blob = new Blob([template], { type: "text/html;charset=utf-8" });
 const link = document.createElement("a");
 link.href = URL.createObjectURL(blob);
 
-link.download = (filename || title.replace(/\s+/g, "_")) + ".html";
+link.download = finalFilename + ".html";
 
 link.click();
 
