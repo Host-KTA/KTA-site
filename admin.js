@@ -21,6 +21,7 @@ document.getElementById("category").value;
 
 const selectedCategory =
 categories.find(category => category.id === categoryId);
+    console.log("카테고리:", selectedCategory);
 
 const finalFilename = filename || title.replace(/\s+/g, "_");
 
