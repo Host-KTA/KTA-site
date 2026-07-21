@@ -15,6 +15,12 @@ async function generateHtml() {
     const heroDesc = document.getElementById("heroDesc").value;
     const content = document.getElementById("content").value;
     const filename = document.getElementById("filename").value.trim();
+    const categoryId =
+document.getElementById("category").value;
+
+
+const selectedCategory =
+categories.find(category => category.id === categoryId);
 
 const finalFilename = filename || title.replace(/\s+/g, "_");
 
