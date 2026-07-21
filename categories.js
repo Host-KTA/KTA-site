@@ -3,7 +3,7 @@ const categories = [
     {
         id: "update",
         name: "변경 사항",
-        page: "update.html",
+        page: "update/update.html",
         folder: "update"
     },
 
@@ -11,7 +11,7 @@ const categories = [
     {
         id: "coupon",
         name: "쿠폰 정보",
-        page: "coupon.html",
+        page: "coupon/coupon.html",
         folder: "coupon"
     },
 
@@ -19,7 +19,7 @@ const categories = [
     {
         id: "gamerule",
         name: "게임 설명",
-        page: "gamerule.html",
+        page: "gamerule/gamerule.html",
         folder: "gamerule"
     },
 
@@ -27,7 +27,7 @@ const categories = [
     {
         id: "episode",
         name: "에피소드",
-        page: "episode.html",
+        page: "episode/episode.html",
         folder: "episode"
     },
 
@@ -35,7 +35,7 @@ const categories = [
     {
         id: "IMO",
         name: "설정 해석",
-        page: "IMO.html",
+        page: "IMO/IMO.html",
         folder: "IMO"
     }
 
