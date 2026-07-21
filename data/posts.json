@@ -1,1 +1,32 @@
-
+[
+    {
+        "title": "변경 사항",
+        "category": "update",
+        "group": "news",
+        "file": "/update/update01.html"
+    },
+    {
+        "title": "쿠폰 모음",
+        "category": "coupon",
+        "group": "news",
+        "file": "/coupon/coupon.html"
+    },
+    {
+        "title": "게임 설명",
+        "category": "gamerule",
+        "group": "gameinfo",
+        "file": "/gamerule/gamerule.html"
+    },
+    {
+        "title": "에피소드",
+        "category": "episode",
+        "group": "research",
+        "file": "/episode/ep04.html"
+    },
+    {
+        "title": "설정 해석",
+        "category": "IMO",
+        "group": "research",
+        "file": "/IMO/IMO01.html"
+    }
+]
