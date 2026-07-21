@@ -44,8 +44,6 @@ const blob = new Blob([template], { type: "text/html;charset=utf-8" });
 const link = document.createElement("a");
 link.href = URL.createObjectURL(blob);
 
-const filename = document.getElementById("filename").value.trim();
-
 link.download = (filename || title.replace(/\s+/g, "_")) + ".html";
 
 link.click();
