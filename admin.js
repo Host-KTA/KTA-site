@@ -14,6 +14,10 @@ async function generateHtml() {
     const heroTitle = document.getElementById("heroTitle").value;
     const heroDesc = document.getElementById("heroDesc").value;
     const content = document.getElementById("content").value;
+    const filename = document.getElementById("filename").value.trim();
+
+const listCode =
+`<h3><a href="${filename}.html">${title}</a></h3>`;
 
     // description은 비워두면 Hero 설명을 사용
 const description = document.getElementById("description").value;
