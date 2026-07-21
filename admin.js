@@ -1,3 +1,13 @@
+const categorySelect = document.getElementById("category");
+
+categories.forEach(category => {
+    const option = document.createElement("option");
+    option.value = category.id;
+    option.textContent = category.name;
+
+    categorySelect.appendChild(option);
+});
+
 async function generateHtml() {
 
     const title = document.getElementById("title").value;
