@@ -20,8 +20,21 @@ async function generateHtml() {
         .replace(/{{heroDesc}}/g, heroDesc)
         .replace(/{{mainContent}}/g, content);
 
-    // 결과 출력
-    document.getElementById("result").value = template;
+// 결과 미리보기
+document.getElementById("result").value = template;
+
+// HTML 파일 다운로드
+const blob = new Blob([template], { type: "text/html;charset=utf-8" });
+
+const link = document.createElement("a");
+link.href = URL.createObjectURL(blob);
+
+// 파일명
+link.download = title.replace(/\s+/g, "_") + ".html";
+
+link.click();
+
+URL.revokeObjectURL(link.href);
 }
 
 document.getElementById("generateBtn").addEventListener("click", generateHtml);
