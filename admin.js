@@ -18,47 +18,56 @@ async function generateHtml() {
 
 
     const title =
-    document.getElementById("title").value;
+        document.getElementById("title").value;
 
 
     const heroTitle =
-    document.getElementById("heroTitle").value;
+        document.getElementById("heroTitle").value;
 
 
     const heroDesc =
-    document.getElementById("heroDesc").value;
+        document.getElementById("heroDesc").value;
 
 
     const content =
-    document.getElementById("content").value;
+        document.getElementById("content").value;
 
 
     const filename =
-    document.getElementById("filename").value.trim();
-
+        document.getElementById("filename").value.trim();
 
 
     const categoryId =
-    document.getElementById("category").value;
+        document.getElementById("category").value;
 
 
 
     const selectedCategory =
-    categories.find(category => category.id === categoryId);
+        categories.find(category => category.id === categoryId);
+
+
+
+    if (!selectedCategory) {
+
+        alert("카테고리를 선택하세요.");
+
+        return;
+
+    }
 
 
 
     const finalFilename =
-    filename || title.replace(/\s+/g, "_");
+        filename || title.replace(/\s+/g, "_");
 
 
 
     const description =
-    document.getElementById("description").value;
+        document.getElementById("description").value;
 
 
 
-    // 목록 코드
+    // 목록 추가 코드
 
     const listCode =
 `
@@ -71,7 +80,7 @@ ${title}
 
 
 
-    // posts.json 추가용 코드
+    // posts.json 추가 코드
 
     const postCode =
 `
@@ -88,62 +97,54 @@ ${title}
     // 템플릿 읽기
 
     const response =
-    await fetch("kta-template.html");
+        await fetch("kta-template.html");
 
 
     let template =
-    await response.text();
+        await response.text();
 
 
 
-    // 치환
+    // 템플릿 치환
 
-    template =
-    template
-    .replace(/{{title}}/g, title)
-    .replace(/{{description}}/g, description)
-    .replace(/{{heroTitle}}/g, heroTitle)
-    .replace(/{{heroDesc}}/g, heroDesc)
-    .replace(/{{mainContent}}/g, content);
-
-
-
-    // 결과
-
-    document.getElementById("result").value =
-    template;
-
-
-    document.getElementById("listCode").value =
-    listCode;
+    template = template
+        .replace(/{{title}}/g, title)
+        .replace(/{{description}}/g, description)
+        .replace(/{{heroTitle}}/g, heroTitle)
+        .replace(/{{heroDesc}}/g, heroDesc)
+        .replace(/{{mainContent}}/g, content);
 
 
 
-    // posts.json 코드 출력
+    // 출력
 
-    console.log(postCode);
+    document.getElementById("result").value = template;
+
+    document.getElementById("listCode").value = listCode;
+
+    document.getElementById("postCode").value = postCode;
 
 
 
     // HTML 다운로드
 
     const blob =
-    new Blob(
-        [template],
-        {type:"text/html;charset=utf-8"}
-    );
+        new Blob(
+            [template],
+            { type: "text/html;charset=utf-8" }
+        );
 
 
     const link =
-    document.createElement("a");
+        document.createElement("a");
 
 
     link.href =
-    URL.createObjectURL(blob);
+        URL.createObjectURL(blob);
 
 
     link.download =
-    finalFilename + ".html";
+        finalFilename + ".html";
 
 
     link.click();
@@ -156,8 +157,8 @@ ${title}
 
 
 document
-.getElementById("generateBtn")
-.addEventListener(
-    "click",
-    generateHtml
-);
+    .getElementById("generateBtn")
+    .addEventListener(
+        "click",
+        generateHtml
+    );
