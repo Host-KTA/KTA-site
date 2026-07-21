@@ -17,10 +17,10 @@ const categories = [
 
 
     {
-        id: "gameinfo",
+        id: "gamerule",
         name: "게임 설명",
-        page: "gameinfo.html",
-        folder: "gameinfo"
+        page: "gamerule.html",
+        folder: "gamerule"
     },
 
 
@@ -33,10 +33,10 @@ const categories = [
 
 
     {
-        id: "research",
+        id: "IMO",
         name: "설정 해석",
-        page: "research.html",
-        folder: "research"
+        page: "IMO.html",
+        folder: "IMO"
     }
 
 ];
