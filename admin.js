@@ -24,8 +24,25 @@ categories.find(category => category.id === categoryId);
 
 const finalFilename = filename || title.replace(/\s+/g, "_");
 
-const listCode =
-`<h3><a href="${finalFilename}.html">${title}</a></h3>`;
+let listCode = "";
+
+
+if (selectedCategory) {
+
+    listCode =
+`
+<section class="card">
+
+<h3>
+<a href="${finalFilename}.html">
+${title}
+</a>
+</h3>
+
+</section>
+`;
+
+}
 
     // description은 비워두면 Hero 설명을 사용
 const description = document.getElementById("description").value;
