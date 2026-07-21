@@ -6,7 +6,7 @@ async function generateHtml() {
     const content = document.getElementById("content").value;
 
     // description은 비워두면 Hero 설명을 사용
-    const description = heroDesc;
+const description = document.getElementById("description").value;
 
     // 템플릿 읽기
     const response = await fetch("kta-template.html");
