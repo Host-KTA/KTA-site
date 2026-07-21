@@ -43,7 +43,9 @@ ${title}
 `;
 
 }
-
+console.log(selectedCategory);
+console.log(listCode);
+    
     // description은 비워두면 Hero 설명을 사용
 const description = document.getElementById("description").value;
 
