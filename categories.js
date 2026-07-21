@@ -12,7 +12,7 @@ const categories = [
     {
         id: "gameinfo",
         name: "게임 설명",
-        page: "game rules.html"
+        page: "gamerule.html"
     },
     {
         id: "episode",
