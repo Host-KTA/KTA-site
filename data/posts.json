@@ -17,16 +17,16 @@
         "group": "gameinfo",
         "file": "/gamerule/gamerule.html"
     },
-   {
-    "title": "에피소드",
-    "category": "episode",
-    "group": "archive",
-    "file": "/episode/ep04.html"
-},
-{
-    "title": "설정 해석",
-    "category": "IMO",
-    "group": "archive",
-    "file": "/IMO/IMO01.html"
-}
+    {
+        "title": "에피소드",
+        "category": "episode",
+        "group": "archive",
+        "file": "/episode/ep04.html"
+    },
+    {
+        "title": "설정 해석",
+        "category": "IMO",
+        "group": "archive",
+        "file": "/IMO/IMO01.html"
+    }
 ]
