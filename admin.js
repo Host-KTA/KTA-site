@@ -2,11 +2,13 @@ const categorySelect = document.getElementById("category");
 
 categories.forEach(category => {
     const option = document.createElement("option");
+
     option.value = category.id;
     option.textContent = category.name;
 
     categorySelect.appendChild(option);
 });
+
 
 async function generateHtml() {
 
@@ -15,44 +17,33 @@ async function generateHtml() {
     const heroDesc = document.getElementById("heroDesc").value;
     const content = document.getElementById("content").value;
     const filename = document.getElementById("filename").value.trim();
+
     const categoryId =
-document.getElementById("category").value;
+        document.getElementById("category").value;
 
 
-const selectedCategory =
-categories.find(category => category.id === categoryId);
-    console.log("카테고리:", selectedCategory);
-
-const finalFilename = filename || title.replace(/\s+/g, "_");
-
-let listCode = "";
+    const selectedCategory =
+        categories.find(category => category.id === categoryId);
 
 
-if (selectedCategory) {
+    const finalFilename =
+        filename || title.replace(/\s+/g, "_");
 
-    listCode =
-`
-<section class="card">
 
-<h3>
-<a href="${finalFilename}.html">
-${title}
-</a>
-</h3>
+    // 목록에 추가할 코드 생성
+    const listCode =
+`<h3><a href="/${selectedCategory.folder}/${finalFilename}.html">${title}</a></h3>`;
 
-</section>
-`;
 
-}
-console.log(selectedCategory);
-console.log(listCode);
-    
-    // description은 비워두면 Hero 설명을 사용
-const description = document.getElementById("description").value;
+    // description은 비워두면 Hero 설명 사용
+    const description =
+        document.getElementById("description").value;
+
 
     // 템플릿 읽기
     const response = await fetch("kta-template.html");
     let template = await response.text();
+
 
     // 치환
     template = template
@@ -62,21 +53,34 @@ const description = document.getElementById("description").value;
         .replace(/{{heroDesc}}/g, heroDesc)
         .replace(/{{mainContent}}/g, content);
 
-// 결과 미리보기
-document.getElementById("result").value = template;
+
+    // 결과 표시
+    document.getElementById("result").value = template;
+
+    // 목록 코드 표시
     document.getElementById("listCode").value = listCode;
 
-// HTML 파일 다운로드
-const blob = new Blob([template], { type: "text/html;charset=utf-8" });
 
-const link = document.createElement("a");
-link.href = URL.createObjectURL(blob);
+    // HTML 다운로드
+    const blob = new Blob(
+        [template],
+        { type: "text/html;charset=utf-8" }
+    );
 
-link.download = finalFilename + ".html";
 
-link.click();
+    const link = document.createElement("a");
 
-URL.revokeObjectURL(link.href);
+    link.href = URL.createObjectURL(blob);
+
+    link.download = finalFilename + ".html";
+
+    link.click();
+
+
+    URL.revokeObjectURL(link.href);
 }
 
-document.getElementById("generateBtn").addEventListener("click", generateHtml);
+
+document
+    .getElementById("generateBtn")
+    .addEventListener("click", generateHtml);
