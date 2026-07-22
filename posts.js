@@ -74,6 +74,10 @@ fetch("/data/posts.json")
 })
 .catch(error => {
 
-    console.error("게시글 불러오기 실패:", error);
+    console.error(error);
+
+    document.getElementById("newsPosts").innerHTML = "오류";
+    document.getElementById("gamePosts").innerHTML = "오류";
+    document.getElementById("archivePosts").innerHTML = "오류";
 
 });
