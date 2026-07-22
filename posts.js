@@ -76,8 +76,8 @@ fetch("/data/posts.json")
 
     console.error(error);
 
-    document.getElementById("newsPosts").innerHTML = "오류";
-    document.getElementById("gamePosts").innerHTML = "오류";
-    document.getElementById("archivePosts").innerHTML = "오류";
+    document.getElementById("newsPosts").innerHTML = error.message;
+    document.getElementById("gamePosts").innerHTML = error.message;
+    document.getElementById("archivePosts").innerHTML = error.message;
 
 });
