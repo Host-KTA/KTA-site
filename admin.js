@@ -200,9 +200,24 @@ document
 
     );
 
-    const result =
+const result =
     await response.json();
 
-    console.log(result);
+console.log(result);
+
+
+if(result.success){
+
+    const contentBox =
+    document.getElementById("content");
+
+
+    contentBox.value +=
+    `\n<img src="/${result.file}">\n`;
+
+
+    alert("이미지가 본문에 추가되었습니다.");
+
+}
 
 });
