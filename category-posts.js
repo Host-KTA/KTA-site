@@ -41,3 +41,5 @@ fetch("/data/posts.json")
 
 
 });
+
+alert("새 category-posts 로딩");
