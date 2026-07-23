@@ -14,17 +14,17 @@ const categories = [
         group: "news"
     },
     {
-        id: "gamerule",
+        id: "rules",
         name: "게임 설명(Rules)",
-        folder: "gamerule",
-        page: "gamerule.html",
+        folder: "rules",
+        page: "rules.html",
         group: "gameinfo"
     },
     {
-        id: "episode",
+        id: "archive",
         name: "에피소드(Episodes)",
-        folder: "episode",
-        page: "episode.html",
+        folder: "archive",
+        page: "archive.html",
         group: "archive"
     },
     {
