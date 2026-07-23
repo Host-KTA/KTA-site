@@ -9,7 +9,10 @@ fetch("/data/posts.json")
 
     const filtered =
         posts
-        .filter(post => post.category === category)
+        .filter(post =>
+    post.category === category &&
+    post.type === "post"
+)
         .sort((a,b) =>
             new Date(b.date) - new Date(a.date)
         );
