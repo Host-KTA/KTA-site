@@ -7,12 +7,12 @@ fetch("/data/posts.json")
         document.getElementById("postList");
 
 
-    const filtered =
-        posts
-.filter(post =>
-    post.category === category &&
-    post.date
-)
+const filtered =
+    posts
+    .filter(post =>
+        post.category === category &&
+        post.type === "post"
+    )
         .sort((a,b) =>
             new Date(b.date) - new Date(a.date)
         );
