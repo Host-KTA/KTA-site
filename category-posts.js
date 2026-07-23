@@ -46,5 +46,3 @@ const filtered =
 
 
 });
-
-alert("새 category-posts 로딩");
