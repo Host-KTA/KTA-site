@@ -1,3 +1,5 @@
+alert("현재 admin.js 실행");
+
 const categorySelect = document.getElementById("category");
 
 
