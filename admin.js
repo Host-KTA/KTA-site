@@ -162,3 +162,29 @@ document
         "click",
         generateHtml
     );
+
+document
+.getElementById("uploadImage")
+.addEventListener("click", async () => {
+
+    const file =
+    document
+    .getElementById("imageFile")
+    .files[0];
+
+    if(!file){
+
+        alert("이미지를 선택하세요.");
+
+        return;
+
+    }
+
+    const formData =
+    new FormData();
+
+    formData.append("image", file);
+
+    console.log(formData);
+
+});
