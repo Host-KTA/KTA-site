@@ -28,6 +28,11 @@
         "category": "IMO",
         "group": "archive",
         "file": "/IMO/IMO01.html"
+    },
+    {
+        "title": "CMS 테스트 3",
+        "category": "IMO",
+        "group": "archive",
+        "file": "/IMO/test03.html"
     }
-
 ]
