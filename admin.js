@@ -208,6 +208,8 @@ console.log(result);
 
 if(result.success){
 
+    alert("여기 실행됨");
+    
     const contentBox =
     document.getElementById("content");
 
