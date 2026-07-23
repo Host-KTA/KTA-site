@@ -185,6 +185,24 @@ document
 
     formData.append("image", file);
 
-    console.log(formData);
+    const response =
+    await fetch(
+
+        "https://ktaupload.koffeezip.workers.dev",
+
+        {
+
+            method:"POST",
+
+            body:formData
+
+        }
+
+    );
+
+    const result =
+    await response.json();
+
+    console.log(result);
 
 });
