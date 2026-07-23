@@ -48,5 +48,12 @@
         "group": "gameinfo",
         "file": "/gamerule/게임설명_테스트",
         "date": "2026-07-23"
+    },
+    {
+        "title": "에피소드_테스트",
+        "category": "episode",
+        "group": "archive",
+        "file": "/episode/에피소드_테스트",
+        "date": "2026-07-23"
     }
 ]
