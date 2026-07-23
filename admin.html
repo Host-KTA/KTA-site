@@ -17,29 +17,63 @@
 
 <h1>KTA CMS 2.0</h1>
 
+
+<p>생성 종류</p>
+
+<select id="createType">
+
+<option value="post">
+게시글 생성
+</option>
+
+<option value="category">
+중분류 페이지 생성
+</option>
+
+</select>
+
+
+
 <p>파일명</p>
+
 <input id="filename" placeholder="episode01">
 
+
+
 <p>제목</p>
+
 <input id="title">
 
+
+
 <p>카테고리</p>
-  
+
 <select id="category">
-</select> 
-  
+
+</select>
+
+
+
 <p>설명</p>
+
 <input id="description">
 
+
+
 <p>Hero 제목</p>
+
 <input id="heroTitle">
 
 
+
 <p>Hero 설명</p>
+
 <input id="heroDesc">
 
 
+
 <p>본문</p>
+
 
 <textarea
 id="content"
@@ -47,72 +81,97 @@ rows="10"
 cols="80">
 </textarea>
 
-<p>목록에 추가할 코드</p>
 
-<textarea
-id="listCode"
-rows="5"
-cols="80"
-readonly>
-</textarea>
-  
-<p>posts.json 추가 코드</p>
-
-<textarea
-id="postCode"
-rows="8"
-cols="80"
-readonly>
-</textarea>
 
 <br><br>
 
 
 <button id="generateBtn">
 
-HTML 생성
+생성
 
 </button>
 
 
-<br><br>
-
-
-<textarea
-id="result"
-rows="20"
-cols="100">
-</textarea>
 
 <script src="categories.js"></script>
+
 <script src="admin.js"></script>
 
+
+
 <script>
+
 document
 .getElementById("generateBtn")
 .addEventListener("click", async () => {
 
+
   const data = {
-    title: document.getElementById("title").value,
-    category: document.getElementById("category").value,
-    file: document.getElementById("filename").value,
-    description: document.getElementById("description").value,
-    heroTitle: document.getElementById("heroTitle").value,
-    heroDesc: document.getElementById("heroDesc").value,
-    content: document.getElementById("content").value
+
+    type:
+    document.getElementById("createType").value,
+
+
+    title:
+    document.getElementById("title").value,
+
+
+    category:
+    document.getElementById("category").value,
+
+
+    file:
+    document.getElementById("filename").value,
+
+
+    description:
+    document.getElementById("description").value,
+
+
+    heroTitle:
+    document.getElementById("heroTitle").value,
+
+
+    heroDesc:
+    document.getElementById("heroDesc").value,
+
+
+    content:
+    document.getElementById("content").value
+
   };
 
-  await fetch("https://ktacmsapi.koffeezip.workers.dev/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data)
-  });
 
-  alert("HTML 생성 완료");
+
+  await fetch(
+    "https://ktacmsapi.koffeezip.workers.dev/",
+    {
+
+      method:"POST",
+
+      headers:
+      {
+        "Content-Type":"application/json"
+      },
+
+
+      body:
+      JSON.stringify(data)
+
+    }
+  );
+
+
+
+  alert("생성 완료");
+
+
 });
+
+
 </script>
+
 
 </body>
 
