@@ -1,37 +1,47 @@
 const categories = [
+
     {
         id: "update",
         name: "변경 사항(Update)",
-        folder: "update",
+        folder: "news/update",
         page: "update.html",
         group: "news"
     },
+
+
     {
         id: "coupon",
         name: "쿠폰 정보(Coupon)",
-        folder: "coupon",
+        folder: "news/coupon",
         page: "coupon.html",
         group: "news"
     },
+
+
     {
         id: "rules",
         name: "게임 설명(Rules)",
-        folder: "rules",
+        folder: "gameinfo/rules",
         page: "rules.html",
         group: "gameinfo"
     },
+
+
     {
-        id: "archive",
+        id: "episode",
         name: "에피소드(Episodes)",
-        folder: "archive",
-        page: "archive.html",
+        folder: "archive/episode",
+        page: "episode.html",
         group: "archive"
     },
+
+
     {
         id: "IMO",
         name: "설정 해석(IMO)",
-        folder: "IMO",
+        folder: "archive/IMO",
         page: "IMO.html",
         group: "archive"
     }
+
 ];
