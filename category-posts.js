@@ -13,6 +13,8 @@ fetch("/data/posts.json")
         .sort((a,b) =>
             new Date(b.date) - new Date(a.date)
         );
+    
+    console.log(filtered);
 
 
     if(filtered.length === 0){
