@@ -8,11 +8,13 @@ fetch("/data/posts.json")
     const archiveBox = document.getElementById("archivePosts");
 
 
-    // 최신 글이 위로 오도록 정렬
-    posts.reverse();
+    // 날짜 기준 최신순 정렬
+
+    posts.sort((a, b) => {
+        return new Date(b.date || 0) - new Date(a.date || 0);
+    });
 
 
-    // 그룹별 분리 후 최신 5개만 선택
 
     const newsPosts = posts
         .filter(post => post.group === "news")
@@ -30,8 +32,6 @@ fetch("/data/posts.json")
 
 
 
-    // 출력 함수
-
     function renderPosts(box, list) {
 
 
@@ -42,12 +42,19 @@ fetch("/data/posts.json")
 
 
             const html =
+
             `
-            <p>
+            <div class="post-item">
+
                 <a href="${post.file}">
                     ${post.title}
                 </a>
-            </p>
+
+                <span>
+                    ${post.date || ""}
+                </span>
+
+            </div>
             `;
 
 
@@ -57,7 +64,8 @@ fetch("/data/posts.json")
         });
 
 
-        if(list.length === 0) {
+
+        if(list.length === 0){
 
             box.innerHTML = "게시글 없음";
 
@@ -79,13 +87,6 @@ fetch("/data/posts.json")
 })
 .catch(error => {
 
-
     console.error(error);
-
-
-    document.getElementById("newsPosts").innerHTML = error.message;
-    document.getElementById("gamePosts").innerHTML = error.message;
-    document.getElementById("archivePosts").innerHTML = error.message;
-
 
 });
