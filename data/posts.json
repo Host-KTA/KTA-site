@@ -34,5 +34,12 @@
         "category": "IMO",
         "group": "archive",
         "file": "/IMO/test03.html"
+    },
+    {
+        "title": "테스트4",
+        "category": "IMO",
+        "group": "archive",
+        "file": "/IMO/테스트4",
+        "date": "2026-07-23"
     }
 ]
