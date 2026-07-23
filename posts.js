@@ -12,72 +12,80 @@ fetch("/data/posts.json")
     posts.reverse();
 
 
-    posts.forEach(post => {
+    // 그룹별 분리 후 최신 5개만 선택
+
+    const newsPosts = posts
+        .filter(post => post.group === "news")
+        .slice(0, 5);
 
 
-        const html =
-        `
-        <p>
-            <a href="${post.file}">
-                ${post.title}
-            </a>
-        </p>
-        `;
+    const gamePosts = posts
+        .filter(post => post.group === "gameinfo")
+        .slice(0, 5);
 
 
-        if(post.group === "news") {
+    const archivePosts = posts
+        .filter(post => post.group === "archive")
+        .slice(0, 5);
 
-            newsBox.innerHTML += html;
+
+
+    // 출력 함수
+
+    function renderPosts(box, list) {
+
+
+        box.innerHTML = "";
+
+
+        list.forEach(post => {
+
+
+            const html =
+            `
+            <p>
+                <a href="${post.file}">
+                    ${post.title}
+                </a>
+            </p>
+            `;
+
+
+            box.innerHTML += html;
+
+
+        });
+
+
+        if(list.length === 0) {
+
+            box.innerHTML = "게시글 없음";
 
         }
 
 
-        if(post.group === "gameinfo") {
-
-            gameBox.innerHTML += html;
-
-        }
-
-
-        if(post.group === "archive") {
-
-            archiveBox.innerHTML += html;
-
-        }
-
-
-    });
-
-
-
-    if(newsBox.innerHTML === "") {
-
-        newsBox.innerHTML = "게시글 없음";
-
     }
 
 
-    if(gameBox.innerHTML === "") {
 
-        gameBox.innerHTML = "게시글 없음";
+    renderPosts(newsBox, newsPosts);
 
-    }
+    renderPosts(gameBox, gamePosts);
 
+    renderPosts(archiveBox, archivePosts);
 
-    if(archiveBox.innerHTML === "") {
-
-        archiveBox.innerHTML = "게시글 없음";
-
-    }
 
 
 })
 .catch(error => {
 
+
     console.error(error);
+
 
     document.getElementById("newsPosts").innerHTML = error.message;
     document.getElementById("gamePosts").innerHTML = error.message;
     document.getElementById("archivePosts").innerHTML = error.message;
+
 
 });
