@@ -2,53 +2,42 @@ fetch("/data/posts.json")
 .then(response => response.json())
 .then(posts => {
 
-    const list = document.getElementById("postList");
 
-    if (!list) return;
-
-
-    // 페이지에서 설정한 category 값
-    const currentCategory = category;
+    const list =
+        document.getElementById("postList");
 
 
-    const filteredPosts = posts
-        .filter(post => post.category === currentCategory)
-        .reverse();
+    const filtered =
+        posts
+        .filter(post => post.category === category)
+        .sort((a,b) =>
+            new Date(b.date) - new Date(a.date)
+        );
 
 
-    if (filteredPosts.length === 0) {
+    if(filtered.length === 0){
 
-        list.innerHTML = "게시글 없음";
+        list.innerHTML =
+        "<p>등록된 게시글이 없습니다.</p>";
+
         return;
 
     }
 
 
-    filteredPosts.forEach(post => {
 
-        const html = `
-        <div class="post-item">
+    list.innerHTML = filtered.map(post => `
 
+        <p>
             <a href="${post.file}">
                 ${post.title}
             </a>
-
             <span>
-                ${post.date || ""}
+                ${post.date}
             </span>
+        </p>
 
-        </div>
-        `;
+    `).join("");
 
-
-        list.innerHTML += html;
-
-    });
-
-
-})
-.catch(error => {
-
-    console.error(error);
 
 });
