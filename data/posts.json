@@ -62,5 +62,12 @@
         "group": "news",
         "file": "/update/테스트05.html",
         "date": "2026-07-23"
+    },
+    {
+        "title": "테스트06",
+        "category": "update",
+        "group": "news",
+        "file": "/update/테스트06.html",
+        "date": "2026-07-23"
     }
 ]
