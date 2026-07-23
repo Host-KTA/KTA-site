@@ -55,5 +55,12 @@
         "group": "archive",
         "file": "/episode/에피소드_테스트",
         "date": "2026-07-23"
+    },
+    {
+        "title": "테스트05",
+        "category": "update",
+        "group": "news",
+        "file": "/update/테스트05.html",
+        "date": "2026-07-23"
     }
 ]
