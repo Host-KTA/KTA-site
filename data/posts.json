@@ -28,5 +28,12 @@
         "category": "IMO",
         "group": "archive",
         "file": "/archive/IMO/IMO.html"
+    },
+    {
+        "title": "테스트11",
+        "category": "update",
+        "group": "news",
+        "file": "/news/update/테스트11.html",
+        "date": "2026-07-23"
     }
 ]
