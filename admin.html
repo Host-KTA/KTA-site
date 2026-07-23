@@ -117,42 +117,60 @@ const selectedCategory =
     );
 
 
+const type =
+    document.getElementById("createType").value;
+
+
 const data = {
 
-    type:
-    document.getElementById("createType").value,
+    type: type,
 
     title:
-    document.getElementById("title").value,
+    type === "category"
+    ? selectedCategory.name
+    : document.getElementById("title").value,
+
 
     category:
     categoryId,
 
+
     folder:
     selectedCategory.folder,
+
 
     group:
     selectedCategory.group,
 
+
     file:
-    document.getElementById("filename").value,
+    type === "category"
+    ? categoryId
+    : document.getElementById("filename").value,
+
 
     description:
-    document.getElementById("description").value,
+    type === "category"
+    ? selectedCategory.name + " 페이지"
+    : document.getElementById("description").value,
+
 
     heroTitle:
-    document.getElementById("heroTitle").value,
+    type === "category"
+    ? selectedCategory.name
+    : document.getElementById("heroTitle").value,
+
 
     heroDesc:
-    document.getElementById("heroDesc").value,
+    type === "category"
+    ? selectedCategory.name + " 정보"
+    : document.getElementById("heroDesc").value,
+
 
     content:
     document.getElementById("content").value
 
 };
-
-
-
   await fetch(
     "https://ktacmsapi.koffeezip.workers.dev/",
     {
