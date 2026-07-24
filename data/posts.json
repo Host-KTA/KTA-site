@@ -36,5 +36,13 @@
         "group": "news",
         "file": "/news/update/업데이트 ver 5.1.1.html",
         "date": "2026-07-24"
+    },
+    {
+        "type": "post",
+        "title": "카나테일즈(KanaTales, 카테) 업데이트 v 5.1.1",
+        "category": "update",
+        "group": "news",
+        "file": "/news/update/업데이트 v 5.1.1.html",
+        "date": "2026-07-24"
     }
 ]
