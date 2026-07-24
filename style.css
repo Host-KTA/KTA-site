@@ -210,3 +210,7 @@ body.detail .container {
     color:#777;
 
 }
+
+.content {
+    white-space: pre-line;
+}
