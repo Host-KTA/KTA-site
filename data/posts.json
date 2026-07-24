@@ -68,5 +68,13 @@
         "group": "news",
         "file": "/news/coupon/쿠폰2026.07.24.html",
         "date": "2026-07-24"
+    },
+    {
+        "type": "post",
+        "title": "",
+        "category": "update",
+        "group": "news",
+        "file": "/news/update/.html",
+        "date": "2026-07-24"
     }
 ]
