@@ -43,8 +43,8 @@ async function generateHtml() {
         document.getElementById("heroDesc").value;
 
 
-    const content =
-        document.getElementById("content").value;
+const content =
+    quill.root.innerHTML;
 
 
     const filename =
