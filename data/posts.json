@@ -52,5 +52,13 @@
         "group": "news",
         "file": "/news/update/update v 5.1.1.html",
         "date": "2026-07-24"
+    },
+    {
+        "type": "post",
+        "title": "カナテイルズ v5.1.1 アップデート",
+        "category": "update",
+        "group": "news",
+        "file": "/news/update/アップデート v 5.1.1.html",
+        "date": "2026-07-24"
     }
 ]
