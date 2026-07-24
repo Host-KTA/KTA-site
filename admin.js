@@ -136,13 +136,18 @@ async function generateHtml() {
 
 
 
-    if(!saveResponse.ok){
+if(!saveResponse.ok){
 
-        alert("GitHub 저장 실패");
+    const error =
+        await saveResponse.text();
 
-        return;
+    console.log(error);
 
-    }
+    alert("GitHub 저장 실패\n콘솔 확인");
+
+    return;
+
+}
 
 
 
