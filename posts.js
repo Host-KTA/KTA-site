@@ -18,9 +18,9 @@ fetch("/data/posts.json")
             try {
 
                 const response =
-                    await fetch(post.file, {
-                        method: "HEAD"
-                    });
+    await fetch(
+        post.file + "?check=" + Date.now()
+    );
 
 
                 if(response.ok){
