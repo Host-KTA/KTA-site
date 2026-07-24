@@ -128,12 +128,6 @@ ${title}
         .replace(/{{heroDesc}}/g, heroDesc)
         .replace(/{{mainContent}}/g, content);
 
-
-
-    // 출력
-
-    document.getElementById("result").value = template;
-
     // HTML 다운로드
 
     const blob =
