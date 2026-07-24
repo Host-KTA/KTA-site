@@ -1,6 +1,6 @@
 fetch("/data/posts.json")
 .then(response => response.json())
-.then(posts => {
+.then(async posts => {
 
 
     const newsBox = document.getElementById("newsPosts");
@@ -8,31 +8,80 @@ fetch("/data/posts.json")
     const archiveBox = document.getElementById("archivePosts");
 
 
-    // 날짜 기준 최신순 정렬
+
+    // 존재하는 게시글만 남김
+
+    const checkPosts = await Promise.all(
+
+        posts.map(async post => {
+
+            try {
+
+                const response =
+                    await fetch(post.file, {
+                        method: "HEAD"
+                    });
+
+
+                if(response.ok){
+
+                    return post;
+
+                }
+
+
+            } catch(error){
+
+                return null;
+
+            }
+
+
+        })
+
+    );
+
+
+    posts =
+        checkPosts.filter(post => post !== null);
+
+
+
+    // 날짜 최신순 정렬
 
     posts.sort((a, b) => {
-        return new Date(b.date || 0) - new Date(a.date || 0);
+
+        return new Date(b.date || 0)
+        -
+        new Date(a.date || 0);
+
     });
 
 
 
-    const newsPosts = posts
+    const newsPosts =
+        posts
         .filter(post => post.group === "news")
-        .slice(0, 5);
+        .slice(0,5);
 
 
-    const gamePosts = posts
+
+    const gamePosts =
+        posts
         .filter(post => post.group === "gameinfo")
-        .slice(0, 5);
+        .slice(0,5);
 
 
-    const archivePosts = posts
+
+    const archivePosts =
+        posts
         .filter(post => post.group === "archive")
-        .slice(0, 5);
+        .slice(0,5);
 
 
 
-    function renderPosts(box, list) {
+
+    function renderPosts(box, list){
 
 
         box.innerHTML = "";
@@ -67,7 +116,8 @@ fetch("/data/posts.json")
 
         if(list.length === 0){
 
-            box.innerHTML = "게시글 없음";
+            box.innerHTML =
+            "게시글 없음";
 
         }
 
