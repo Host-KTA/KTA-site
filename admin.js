@@ -224,8 +224,8 @@ if(result.success){
 
     alert("여기 실행됨");
     
-    const contentBox =
-    document.getElementById("content");
+quill.root.innerHTML +=
+`\n<img src="/${result.file}">\n`;
 
 
     contentBox.value +=
