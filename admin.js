@@ -1,4 +1,3 @@
-
 const quill = new Quill('#editor', {
     theme: 'snow',
     modules: {
@@ -11,6 +10,7 @@ const quill = new Quill('#editor', {
         ]
     }
 });
+
 
 const categorySelect = document.getElementById("category");
 
@@ -25,6 +25,7 @@ categories.forEach(category => {
     categorySelect.appendChild(option);
 
 });
+
 
 
 
@@ -43,8 +44,8 @@ async function generateHtml() {
         document.getElementById("heroDesc").value;
 
 
-const content =
-    quill.root.innerHTML;
+    const content =
+        quill.root.innerHTML;
 
 
     const filename =
@@ -80,7 +81,73 @@ const content =
         document.getElementById("description").value;
 
 
-    // 템플릿 읽기
+
+
+    // Worker → GitHub 저장
+
+    const cmsData = {
+
+        type: "post",
+
+        title: title,
+
+        category: selectedCategory.id,
+
+        folder: selectedCategory.folder,
+
+        file: finalFilename,
+
+        group: selectedCategory.group,
+
+        description: description,
+
+        heroTitle: heroTitle,
+
+        heroDesc: heroDesc,
+
+        content: content
+
+    };
+
+
+
+    const saveResponse =
+        await fetch(
+
+            "https://ktacmsapi.koffeezip.workers.dev/",
+
+            {
+
+                method:"POST",
+
+                headers:{
+
+                    "Content-Type":"application/json"
+
+                },
+
+                body:
+
+                JSON.stringify(cmsData)
+
+            }
+
+        );
+
+
+
+    if(!saveResponse.ok){
+
+        alert("GitHub 저장 실패");
+
+        return;
+
+    }
+
+
+
+
+    // 생성된 HTML 미리보기용 다운로드
 
     const response =
         await fetch("kta-template.html");
@@ -91,8 +158,6 @@ const content =
 
 
 
-    // 템플릿 치환
-
     template = template
         .replace(/{{title}}/g, title)
         .replace(/{{description}}/g, description)
@@ -100,13 +165,16 @@ const content =
         .replace(/{{heroDesc}}/g, heroDesc)
         .replace(/{{mainContent}}/g, content);
 
-    // HTML 다운로드
+
 
     const blob =
         new Blob(
             [template],
-            { type: "text/html;charset=utf-8" }
+            {
+                type:"text/html;charset=utf-8"
+            }
         );
+
 
 
     const link =
@@ -126,25 +194,39 @@ const content =
 
     URL.revokeObjectURL(link.href);
 
+
+
+    alert("생성 및 GitHub 저장 완료");
+
 }
 
 
 
+
+
 document
-    .getElementById("generateBtn")
-    .addEventListener(
-        "click",
-        generateHtml
-    );
+.getElementById("generateBtn")
+.addEventListener(
+    "click",
+    generateHtml
+);
+
+
+
+
+
+// 이미지 업로드
 
 document
 .getElementById("uploadImage")
 .addEventListener("click", async () => {
 
+
     const file =
     document
     .getElementById("imageFile")
     .files[0];
+
 
     if(!file){
 
@@ -154,39 +236,51 @@ document
 
     }
 
+
+
     const formData =
-    new FormData();
+        new FormData();
+
 
     formData.append("image", file);
 
+
+
     const response =
-    await fetch(
+        await fetch(
 
-        "https://ktaupload.koffeezip.workers.dev",
+            "https://ktaupload.koffeezip.workers.dev",
 
-        {
+            {
 
-            method:"POST",
+                method:"POST",
 
-            body:formData
+                body:formData
 
-        }
+            }
 
-    );
+        );
 
-const result =
-    await response.json();
 
-console.log(result);
-console.log(result.success);
 
-if(result.success){
+    const result =
+        await response.json();
 
-    quill.root.innerHTML +=
-    `\n<img src="/${result.file}">\n`;
 
-    alert("이미지가 본문에 추가되었습니다.");
 
-}
+
+    if(result.success){
+
+
+        quill.root.innerHTML +=
+
+        `\n<img src="/${result.file}">\n`;
+
+
+
+        alert("이미지가 본문에 추가되었습니다.");
+
+    }
+
 
 });
