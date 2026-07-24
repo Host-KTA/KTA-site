@@ -76,5 +76,13 @@
         "group": "news",
         "file": "/news/update/.html",
         "date": "2026-07-24"
+    },
+    {
+        "type": "post",
+        "title": "카나테일즈 게임 룰",
+        "category": "rules",
+        "group": "gameinfo",
+        "file": "/gameinfo/rules/게임 룰.html",
+        "date": "2026-07-24"
     }
 ]
