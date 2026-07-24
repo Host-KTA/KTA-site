@@ -80,34 +80,6 @@ const content =
         document.getElementById("description").value;
 
 
-
-    // 목록 추가 코드
-
-    const listCode =
-`
-<h3>
-<a href="/${selectedCategory.folder}/${finalFilename}.html">
-${title}
-</a>
-</h3>
-`;
-
-
-
-    // posts.json 추가 코드
-
-    const postCode =
-`
-{
-    "title": "${title}",
-    "category": "${selectedCategory.id}",
-    "group": "${selectedCategory.group}",
-    "file": "/${selectedCategory.folder}/${finalFilename}.html"
-}
-`;
-
-
-
     // 템플릿 읽기
 
     const response =
