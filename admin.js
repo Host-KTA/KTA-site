@@ -1,5 +1,3 @@
-console.log("admin.js 시작");
-
 const quill = new Quill('#editor', {
     theme: 'snow',
     modules: {
@@ -48,8 +46,6 @@ async function generateHtml() {
 
     const content =
         quill.root.innerHTML;
-
-    console.log(content);
 
     const filename =
         document.getElementById("filename").value.trim();
@@ -228,9 +224,6 @@ document
 document
 .getElementById("uploadImage")
 .addEventListener("click", async () => {
-
-    console.log("이미지 버튼 클릭됨");
-
 
     const file =
     document
