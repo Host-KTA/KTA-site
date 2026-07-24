@@ -227,6 +227,8 @@ document
 .getElementById("uploadImage")
 .addEventListener("click", async () => {
 
+    console.log("이미지 버튼 클릭됨");
+
 
     const file =
     document
