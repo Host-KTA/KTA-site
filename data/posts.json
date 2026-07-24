@@ -84,5 +84,13 @@
         "group": "gameinfo",
         "file": "/gameinfo/rules/game rules.html",
         "date": "2026-07-24"
+    },
+    {
+        "type": "post",
+        "title": "game rules",
+        "category": "rules",
+        "group": "gameinfo",
+        "file": "/gameinfo/rules/game rules(Eng).html",
+        "date": "2026-07-24"
     }
 ]
