@@ -182,19 +182,8 @@ console.log(result.success);
 
 if(result.success){
 
-    alert("여기 실행됨");
-    
-if(result.success){
-
-    alert("여기 실행됨");
-
     quill.root.innerHTML +=
     `\n<img src="/${result.file}">\n`;
-
-    alert("이미지가 본문에 추가되었습니다.");
-
-}
-
 
     alert("이미지가 본문에 추가되었습니다.");
 
