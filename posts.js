@@ -42,8 +42,8 @@ fetch("/data/posts.json")
     );
 
 
-    posts =
-        checkPosts.filter(post => post !== null);
+posts =
+    checkPosts.filter(post => post && post.file);
 
 
 
