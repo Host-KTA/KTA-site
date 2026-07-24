@@ -31,14 +31,6 @@
     },
     {
         "type": "post",
-        "title": "테스트글1",
-        "category": "update",
-        "group": "news",
-        "file": "/news/update/테스트글1.html",
-        "date": "2026-07-23"
-    },
-    {
-        "type": "post",
         "title": "테스트02",
         "category": "update",
         "group": "news",
