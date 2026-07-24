@@ -27,6 +27,15 @@ const categories = [
     },
 
 
+{
+    id: "deckguide",
+    name: "덱 가이드(Deck Guide)",
+    folder: "gameinfo/deckguide",
+    page: "deckguide.html",
+    group: "gameinfo"
+},
+
+    
     {
         id: "episode",
         name: "에피소드(Episodes)",
