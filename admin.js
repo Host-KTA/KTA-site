@@ -1,4 +1,16 @@
-alert("현재 admin.js 실행");
+
+const quill = new Quill('#editor', {
+    theme: 'snow',
+    modules: {
+        toolbar: [
+            [{ size: ["small", false, "large", "huge"] }],
+            ["bold", "italic", "underline"],
+            [{ header: [1,2,3,false] }],
+            [{ list: "ordered" }, { list: "bullet" }],
+            ["image"]
+        ]
+    }
+});
 
 const categorySelect = document.getElementById("category");
 
