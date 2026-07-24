@@ -274,12 +274,8 @@ document
 
     if(result.success){
 
-
-        quill.root.innerHTML +=
-
-        `\n<img src="/${result.file}">\n`;
-
-
+quill.root.innerHTML +=
+`\n<img src="https://websiteofkta.koffeezip.workers.dev/${result.file}">\n`;
 
         alert("이미지가 본문에 추가되었습니다.");
 
