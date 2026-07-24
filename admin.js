@@ -134,12 +134,6 @@ ${title}
 
     document.getElementById("result").value = template;
 
-    document.getElementById("listCode").value = listCode;
-
-    document.getElementById("postCode").value = postCode;
-
-
-
     // HTML 다운로드
 
     const blob =
