@@ -224,12 +224,16 @@ if(result.success){
 
     alert("여기 실행됨");
     
-quill.root.innerHTML +=
-`\n<img src="/${result.file}">\n`;
+if(result.success){
 
+    alert("여기 실행됨");
 
-    contentBox.value +=
+    quill.root.innerHTML +=
     `\n<img src="/${result.file}">\n`;
+
+    alert("이미지가 본문에 추가되었습니다.");
+
+}
 
 
     alert("이미지가 본문에 추가되었습니다.");
