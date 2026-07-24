@@ -47,6 +47,7 @@ async function generateHtml() {
     const content =
         quill.root.innerHTML;
 
+    console.log(content);
 
     const filename =
         document.getElementById("filename").value.trim();
