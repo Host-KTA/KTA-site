@@ -100,13 +100,5 @@
         "group": "gameinfo",
         "file": "/gameinfo/rules/ゲームの進行方法(JP).html",
         "date": "2026-07-24"
-    },
-    {
-        "type": "post",
-        "title": "카나테일즈(KanaTales, 카테)의 덱가이드",
-        "category": "deckguide",
-        "group": "gameinfo",
-        "file": "/gameinfo/deckguide/deckguide.html",
-        "date": "2026-07-24"
     }
 ]
