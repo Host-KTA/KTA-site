@@ -108,5 +108,13 @@
         "group": "gameinfo",
         "file": "/gameinfo/deckguide/deckguide.html",
         "date": "2026-07-24"
+    },
+    {
+        "type": "post",
+        "title": "test01",
+        "category": "deckguide",
+        "group": "gameinfo",
+        "file": "/gameinfo/deckguide/test01.html",
+        "date": "2026-07-24"
     }
 ]
