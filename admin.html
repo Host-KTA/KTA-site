@@ -10,6 +10,10 @@
 
 <link rel="stylesheet" href="style.css">
 
+  <link 
+href="https://cdn.quilljs.com/1.3.6/quill.snow.css"
+rel="stylesheet">
+
 </head>
 
 
@@ -40,7 +44,7 @@
 
 
 
-<p>제목</p>
+<p>타이틀(검색 관련 단어으로)</p>
 
 <input id="title">
 
@@ -54,7 +58,7 @@
 
 
 
-<p>설명</p>
+<p>설명(검색 관련 문장으로)</p>
 
 <input id="description">
 
@@ -75,11 +79,7 @@
 <p>본문</p>
 
 
-<textarea
-id="content"
-rows="10"
-cols="80">
-</textarea>
+<div id="editor"></div>
 
 <p>이미지</p>
 
@@ -106,6 +106,8 @@ accept="image/*">
 
 <script src="categories.js"></script>
 
+<script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  
 <script src="admin.js?v=2"></script>
 
 
