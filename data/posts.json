@@ -68,5 +68,13 @@
         "group": "news",
         "file": "/news/update/update v 5.1.1.html",
         "date": "2026-07-24"
+    },
+    {
+        "type": "post",
+        "title": "카나테일즈 쿠폰, kanatales redeem",
+        "category": "coupon",
+        "group": "news",
+        "file": "/news/coupon/쿠폰2026.07.24.html",
+        "date": "2026-07-24"
     }
 ]
