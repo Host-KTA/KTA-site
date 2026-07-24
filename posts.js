@@ -11,36 +11,36 @@ fetch("/data/posts.json")
 
     // 존재하는 게시글만 남김
 
-    const checkPosts = await Promise.all(
+const checkPosts = await Promise.all(
 
-        posts.map(async post => {
+    posts.map(async post => {
 
-            try {
+        try {
 
-                const response =
-    await fetch(
-        post.file + "?check=" + Date.now()
-    );
-
-
-                if(response.ok){
-
-                    return post;
-
-                }
+            const response =
+                await fetch(
+                    post.file + "?check=" + Date.now()
+                );
 
 
-            } catch(error){
+            if(response.ok){
 
-                return null;
+                return post;
 
             }
 
+        } catch(error){
 
-        })
+            console.error(error);
 
-    );
+        }
 
+
+        return null;
+
+    })
+
+);
 
 posts =
     checkPosts.filter(post => post && post.file);
