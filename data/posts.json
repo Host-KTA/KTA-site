@@ -31,50 +31,10 @@
     },
     {
         "type": "post",
-        "title": "테스트03",
-        "category": "update",
-        "group": "news",
-        "file": "/news/update/테스트03.html",
-        "date": "2026-07-23"
-    },
-    {
-        "type": "post",
-        "title": "test01",
-        "category": "update",
-        "group": "news",
-        "file": "/news/update/test01.html",
-        "date": "2026-07-24"
-    },
-    {
-        "type": "post",
-        "title": "test02",
-        "category": "update",
-        "group": "news",
-        "file": "/news/update/test02.html",
-        "date": "2026-07-24"
-    },
-    {
-        "type": "post",
-        "title": "test03",
-        "category": "update",
-        "group": "news",
-        "file": "/news/update/test03.html",
-        "date": "2026-07-24"
-    },
-    {
-        "type": "post",
         "title": "업데이트 ver 5.1.1",
         "category": "update",
         "group": "news",
         "file": "/news/update/업데이트 ver 5.1.1.html",
-        "date": "2026-07-24"
-    },
-    {
-        "type": "post",
-        "title": "test03",
-        "category": "update",
-        "group": "news",
-        "file": "/news/update/test03.html",
         "date": "2026-07-24"
     }
 ]
