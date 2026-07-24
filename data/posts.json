@@ -92,5 +92,13 @@
         "group": "gameinfo",
         "file": "/gameinfo/rules/game rules(Eng).html",
         "date": "2026-07-24"
+    },
+    {
+        "type": "post",
+        "title": "ゲームの進行方法",
+        "category": "rules",
+        "group": "gameinfo",
+        "file": "/gameinfo/rules/ゲームの進行方法(JP).html",
+        "date": "2026-07-24"
     }
 ]
