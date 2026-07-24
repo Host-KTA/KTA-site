@@ -76,5 +76,13 @@
         "group": "gameinfo",
         "file": "/gameinfo/rules/게임 룰.html",
         "date": "2026-07-24"
+    },
+    {
+        "type": "post",
+        "title": "ㅁㄴㅇㅁㄴㅇ",
+        "category": "IMO",
+        "group": "archive",
+        "file": "/archive/IMO/ㅁㄴㅇㅁㄴㅇ.html",
+        "date": "2026-07-24"
     }
 ]
