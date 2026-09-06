@@ -106,5 +106,13 @@
         "category": "deckguide",
         "group": "gameinfo",
         "file": "/gameinfo/deckguide/deckguide.html"
+    },
+    {
+        "type": "post",
+        "title": "제17회 관찰자 랭킹전",
+        "category": "update",
+        "group": "news",
+        "file": "/news/update/ranking260906.html",
+        "date": "2026-09-06"
     }
 ]
